@@ -1,0 +1,88 @@
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+    border-top: 1px solid rgb(194, 185, 185);
+}
+
+.footer {
+    width: 90%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* FOOTER PAGES */
+.container {
+    height: 100vh;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1 {
+    margin-bottom: 30px;
+}
+
+.container p {
+    margin-bottom: 10px;
+}
+
+.contact-us div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact-us input, textarea {
+    width: 70%;
+    padding: 5px;
+}
+
+.contact-send-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(234, 8, 8);
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links-wrapper{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-us {
+        width: 100%;
+    }
+}
