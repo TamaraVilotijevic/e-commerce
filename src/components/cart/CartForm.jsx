@@ -40,22 +40,28 @@ const CartForm = () => {
         <h2>Shipping Details</h2>
         <form className="cart-form">
             <div>
-                <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} />
             </div>
             <div>
-                <input type="text" name="lastName" placeholder="Last name" value={formData.lastName} onChange={handleChange} />
+                <label htmlFor="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} />
             </div>
             <div>
-                <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} />
+                <label htmlFor="address">Address</label>
+                <input type="text" id="address" name="address" required value={formData.address} onChange={handleChange} />
             </div>
             <div>
-                <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} />
+                <label htmlFor="city">City</label>
+                <input type="text" id="city" name="city" required value={formData.city} onChange={handleChange} />
             </div>
             <div>
-                <input type="text" name="postCode" placeholder="Post code" value={formData.postCode} onChange={handleChange} />
+                <label htmlFor="postCode">Post code</label>
+                <input type="text" id="postCode" name="postCode" required value={formData.postCode} onChange={handleChange} />
             </div>
             <div>
-                <input type="number" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
+                <label htmlFor="phone">Phone</label>
+                <input type="number" id="phone" name="phone" required value={formData.phone} onChange={handleChange} />
             </div>
             <button onClick={handlePurchase} className="cart-form-btn" type="submit">Check Out</button>
         </form>

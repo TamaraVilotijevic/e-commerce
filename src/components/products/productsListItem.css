@@ -1,12 +1,12 @@
 .products-item-wrapper {
-    width: 23%;
     padding: 20px;
-    margin-bottom: 20px;
     text-decoration: none;
     color: black;
     border-radius: 12px;
     box-shadow: 5px 4px 12px #0707072b;
     transition: ease-in-out .3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .products-item-wrapper:hover {
@@ -38,28 +38,4 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 650px) {
-    .products-item-wrapper {
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 650px) and (max-width: 1100px) {
-    .products-item-wrapper {
-        width: 45%;
-        font-size: 14px;
-    }
-
-    .products-img-wrapper {
-        max-height: 250px;
-    }
-}
-
-@media only screen and (min-width: 1100px) and (max-width: 1400px) {
-    .products-item-wrapper {
-        width: 30%;
-        font-size: 14px;
-    }
 }
