@@ -21,8 +21,8 @@ const SingleProduct = () => {
     }, []);
 
     const addToCart = () => {
-        if (product && !addedToCart) {
-            setCart([...cart, product]);
+        if (product) {
+            setCart([...cart, {...product, amount: 1}]);
             setAddedToCart(true);
         }
     };
@@ -38,8 +38,8 @@ const SingleProduct = () => {
                 <p className="rating">Rating: {product.rating.rate} <FaStar />, {product.rating.count} reviews</p>
                 <p className="single-product-price"><b>${product.price}</b></p>
                 <p className="single-product-description">{product.description}</p>
-                <button className="button" onClick={addToCart}>{!addedToCart ? 'Add to cart' : 'Added to cart'}</button>
-                <button className="button" onClick={() => navigate('/products')}>&#171; Back to all products</button>
+                <button className="button" onClick={addToCart}>Add to cart</button>
+                <button className="button back-btn" onClick={() => navigate('/products')}>&#171; Back to all products</button>
             </div>
         </div>)}
     </div>;

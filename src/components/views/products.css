@@ -1,6 +1,9 @@
+.products-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .products-categories-wrapper {
-    height: 60px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,6 +11,7 @@
     top: 0;
     background: white;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .products-categories {
@@ -44,26 +48,17 @@
 }
 
 @media only screen and (max-width: 1100px) {
+    .products-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
     .products-categories-wrapper {
-        height: auto;
-        padding: 10px 20px;
         flex-wrap: wrap;
         position: static;
     }
 
     .products-categories {
         flex-wrap: wrap;
-    }
-}
-
-@media only screen and (min-width: 1100px) and (max-width: 1250px) {
-    .products-categories-wrapper {
-        padding: 10px 60px;
-    }
-}
-
-@media only screen and (min-width: 1250px) {
-    .products-categories-wrapper {
-        padding: 10px 70px;
     }
 }

@@ -32,7 +32,7 @@ const Home = () => {
                 </div>
             </div>)}
             <button className='button' onClick={() => navigate('/products')}>Shop all products &#187;</button>
-            <button className='button' onClick={() => navigate('/products/6')}>View product &#187;</button>
+            <button className='button back-btn' onClick={() => navigate('/products/6')}>View product &#187;</button>
         </div>
     </main>;
 };

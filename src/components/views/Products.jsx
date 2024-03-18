@@ -48,7 +48,7 @@ const Products = () => {
         }
     }
 
-    return <div>
+    return <div className="products-container">
         <div className="products-categories-wrapper">
             <div className="products-categories">
                 <button onClick={fetchProducts} className={`btn-category ${activeBtn === 'all' ? 'active' : ''}`}>All products</button>

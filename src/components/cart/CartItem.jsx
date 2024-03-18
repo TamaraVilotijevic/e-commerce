@@ -6,7 +6,13 @@ const CartItem = ({item}) => {
     const {cart, setCart} = useContext(CartContext);
     
     const removeItem = () => {
-        setCart([...cart].filter(cartItem => cartItem.id !== item.id));
+        const index = cart.findIndex(cartItem => cartItem.id === item.id);
+
+        if (index !== -1) {
+            const newCart = [...cart];
+            newCart.splice(index, 1);
+            setCart(newCart);
+        }
     }
 
     return <div className="cart-item-wrapper">
@@ -15,7 +21,12 @@ const CartItem = ({item}) => {
             <p>{item.title}</p>
         </div>
         <div className="cart-price-wrapper">
-            <p><b>${item.price}</b></p>
+            <p>
+                <span>-</span>
+                {item.amount}
+                <span>+</span>
+            </p>
+            <p><b>${item.price*item.amount}</b></p>
             <FaTrashCan onClick={removeItem} className="trash-icon" />
         </div>
     </div>;
