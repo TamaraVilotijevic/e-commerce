@@ -8,6 +8,7 @@
     padding: 10px 0;
     width: 90%;
     font-size: 25px;
+    max-width: 1400px;
 }
 
 .navbar-wrapper h2:hover {

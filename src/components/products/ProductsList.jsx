@@ -3,7 +3,7 @@ import './productsList.css';
 
 const ProductsList = ({products}) => {
     return <div className="products-wrapper">
-        {products.map(product => <ProductsListItem key={product.id} product={product} />)}
+        {products.map((product,index) => <ProductsListItem key={index} product={product} />)}
     </div>;
 };
 

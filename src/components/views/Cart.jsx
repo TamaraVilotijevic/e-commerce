@@ -22,7 +22,7 @@ const Cart = () => {
         <div className="cart-wrapper">
             <div className="cart-items">
                 <h1>Items: {cart.length}</h1>
-                {cart.map(item => <CartItem key={item.id} item={item} />)}
+                {cart.map((item,index) => <CartItem key={index} item={item} />)}
                 <h2>Total: ${totalPrice().toFixed(2)}</h2>
                 <button className="cart-btn" onClick={() => setCart([])}>Empty cart</button>
                 <button className="cart-btn" onClick={() => navigate('/products')}>&#171; Continue shopping</button>
