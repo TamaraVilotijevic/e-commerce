@@ -7,7 +7,7 @@ import '../cart/cart.css';
 
 const Cart = () => {
     const navigate = useNavigate();
-    const {cart, setCart} = useContext(CartContext);
+    const {cart, setCart, totalItems} = useContext(CartContext);
 
     const totalPrice = () => {
         let total = 0;
@@ -21,7 +21,7 @@ const Cart = () => {
         {cart.length ? (
         <div className="cart-wrapper">
             <div className="cart-items">
-                <h1>Items: {cart.length}</h1>
+                <h1>Shopping cart ({totalItems()})</h1>
                 {cart.map((item,index) => <CartItem key={index} item={item} />)}
                 <h2>Total: ${totalPrice().toFixed(2)}</h2>
                 <button className="cart-btn" onClick={() => setCart([])}>Empty cart</button>

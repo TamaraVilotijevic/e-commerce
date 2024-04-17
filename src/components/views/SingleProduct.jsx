@@ -10,7 +10,6 @@ const SingleProduct = () => {
     const navigate = useNavigate();
     const [product, setProduct] = useState(undefined);
     const {cart, setCart} = useContext(CartContext);
-    const [addedToCart, setAddedToCart] = useState(false);
 
     useEffect(() => {
         api.get(`/products/${productId}`)
@@ -22,8 +21,15 @@ const SingleProduct = () => {
 
     const addToCart = () => {
         if (product) {
+            const existingProduct = cart.find(item => item.id === product.id);
+            if (existingProduct) {
+                const updatedCart = cart.map(item =>
+                    item.id === existingProduct.id ? {...item, amount: item.amount + 1} : item
+                );
+                setCart(updatedCart);
+            } else {
             setCart([...cart, {...product, amount: 1}]);
-            setAddedToCart(true);
+            }
         }
     };
 

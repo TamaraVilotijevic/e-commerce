@@ -9,8 +9,15 @@ const CartContextProvider = ({children}) => {
         setCartState(newCart);
     };
 
+    const totalItems = () => {
+        let total = 0;
+        cart.forEach(item => {
+            total += item.amount;
+        });
+        return total;
+    }
 
-    return <CartContext.Provider value={{cart, setCart}}>
+    return <CartContext.Provider value={{cart, setCart, totalItems}}>
         {children}
     </CartContext.Provider>
 }

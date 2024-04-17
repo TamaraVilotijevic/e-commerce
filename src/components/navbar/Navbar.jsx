@@ -6,13 +6,13 @@ import { CartContext } from "../../context/CartContext";
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const {cart} = useContext(CartContext);
+    const {totalItems} = useContext(CartContext);
 
     return <nav className="navbar-wrapper">
         <h2 onClick={() => navigate('/')}><span className="logo-shop">SHOP</span><span className="logo">byViloTam</span></h2>
         <div className="navbar-cart-wrapper">
             <FiShoppingCart className="navbar-cart-icon" onClick={() => navigate('/cart')} />
-            <span className="navbar-cart-number">{cart.length}</span>
+            <span className="navbar-cart-number">{totalItems()}</span>
         </div>
     </nav>;
 };
