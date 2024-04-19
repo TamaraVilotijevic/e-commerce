@@ -28,6 +28,7 @@ button {
     color: white;
     border: none;
     background-color: rgb(234, 8, 8);
+    text-transform: uppercase;
 }
 
 .button:hover {
