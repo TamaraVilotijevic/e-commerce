@@ -1,5 +1,6 @@
 .cart-wrapper {
     width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
@@ -49,7 +50,7 @@
     align-items: center;
     gap: 10px;
     width: 100%;
-    padding: 15px 10px;
+    padding: 15px 5px;
     border-bottom: 1px solid rgb(186, 181, 181);
     opacity: 0.9;
 }
@@ -57,20 +58,20 @@
 .cart-item-img {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-size: 14px;
     text-transform: uppercase;
     color: rgb(35, 35, 35);
 }
 
 .cart-img {
-    width: 60px;
+    width: 70px;
     text-align: center;
 }
 
 .cart-item-img img {
     max-height: 70px;
-    max-width: 100px;
+    max-width: 70px;
 }
 
 .amount-wrapper-div {
@@ -97,7 +98,7 @@
 .cart-price-wrapper {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     font-size: 20px;
 }
 
@@ -155,7 +156,7 @@
 }
 
 .cart-form input {
-    padding: 5px 10px;
+    padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid rgb(180, 179, 179);
@@ -165,6 +166,15 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+form .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name div {
+    width: 48%;
 }
 
 .cart-form-btn {
@@ -214,6 +224,14 @@
 @media only screen and (max-width: 380px) {
     .amount-wrapper-div {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cart-item-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .cart-item-img {
         flex-wrap: wrap;
     }
 }

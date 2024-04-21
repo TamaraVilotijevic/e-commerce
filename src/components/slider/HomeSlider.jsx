@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const HomeSlider = () => {
     const [sliderProducts, setSliderProducts] = useState([]);
@@ -23,9 +24,10 @@ const HomeSlider = () => {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2000,
       autoplaySpeed: 2000,
-      cssEase: "linear",
+      nextArrow: <MdArrowForwardIos />,
+      prevArrow: <MdArrowBackIos />,
+      pauseOnHover: true,
         responsive: [
           {
             breakpoint: 1024,
@@ -62,7 +64,7 @@ const HomeSlider = () => {
             <div className='slider-img-wrapper'>
               <img src={item.image} alt={item.title} />
             </div>
-            <p>View more...</p>
+            <p className='view-more'>View more...</p>
           </Link>))}
       </Slider>
     </div>

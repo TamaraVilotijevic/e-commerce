@@ -38,14 +38,16 @@ const CartForm = () => {
 
     return <div className="cart-form-wrapper">
         <h2>Shipping Details</h2>
-        <form className="cart-form" onSubmit={handlePurchase}>
-                <div>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} pattern=".*\S+.*" />
-                </div>
-                <div>
-                    <label htmlFor="lastName">Last name</label>
-                    <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} pattern=".*\S+.*" />
+            <form className="cart-form" onSubmit={handlePurchase}>
+                <div className="name">
+                    <div>
+                        <label htmlFor="name">First name</label>
+                        <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} pattern=".*\S+.*" />
+                    </div>
+                    <div>
+                        <label htmlFor="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} pattern=".*\S+.*" />
+                    </div>
                 </div>
                 <div>
                     <label htmlFor="address">Address</label>
@@ -61,7 +63,7 @@ const CartForm = () => {
                 </div>
                 <div>
                     <label htmlFor="phone">Phone</label>
-                    <input type="number" id="phone" name="phone" required value={formData.phone} onChange={handleChange} pattern=".*\S+.*" />
+                    <input type="text" id="phone" name="phone" required value={formData.phone} onChange={handleChange} pattern=".*\S+.*" />
                 </div>
                 <button className="cart-form-btn" type="submit">Check Out</button>
             </form>

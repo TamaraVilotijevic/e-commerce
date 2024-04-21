@@ -51,7 +51,7 @@ const Products = () => {
     return <div className="products-container">
         <div className="products-categories-wrapper">
             <div className="products-categories">
-                <button onClick={() => filterProducts("all")} className={`btn-category ${activeBtn === 'all' ? 'active' : ''}`}>All products</button>
+                <button onClick={() => fetchProducts()} className={`btn-category ${activeBtn === 'all' ? 'active' : ''}`}>All products</button>
                 <button onClick={() => filterProducts("men's clothing")} className={`btn-category ${activeBtn === "men's clothing" ? 'active' : ''}`}>Men</button>
                 <button onClick={() => filterProducts("women's clothing")} className={`btn-category ${activeBtn === "women's clothing" ? 'active' : ''}`}>Women</button>
                 <button onClick={() => filterProducts("jewelery")} className={`btn-category ${activeBtn === "jewelery" ? 'active' : ''}`}>Jewelery</button>

@@ -50,19 +50,12 @@
 .slider-wrapper h2 {
     text-align: center;
     padding-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .slider-item-wrapper {
     text-align: center;
     text-decoration: none;
-}
-
-.slider-item-wrapper p {
-    margin-top: 10px;
-    padding: 3px 5px;
-    background-color: pink;
-    color: white;
-    font-weight: bold;
 }
 
 .slider-img-wrapper {
@@ -92,6 +85,49 @@
     align-items: center;
     justify-content: center;
     margin-inline: auto;
+    transition: ease-in-out .3s;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slick-slide > div:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 4px 12px #07070755;
+    cursor: pointer;
+}
+
+.slick-slide > div:hover img {
+    opacity: 0.5;
+}
+
+.view-more {
+    display: none;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: pink;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.slick-slide > div:hover .view-more {
+    display: block;
+    opacity: 1;
+}
+
+.slick-arrow {
+    margin: 5px!important;
+}
+
+.slick-arrow:hover {
+    color: black!important;
 }
 
 @media only screen and (max-width: 650px) {

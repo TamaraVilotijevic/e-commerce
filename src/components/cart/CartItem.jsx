@@ -25,6 +25,8 @@ const CartItem = ({item}) => {
                 cartItem.id === item.id ? { ...cartItem, amount: cartItem.amount - 1 } : cartItem
             );
             setCart(updatedCart);
+        } else {
+            removeItem();
         }
     }
 
