@@ -51,6 +51,7 @@
     text-align: center;
     padding-bottom: 30px;
     font-family: "Montserrat", sans-serif;
+    color: rgb(69, 69, 69);
 }
 
 .slider-item-wrapper {
@@ -124,10 +125,78 @@
 
 .slick-arrow {
     margin: 5px!important;
+    color: black!important;
 }
 
 .slick-arrow:hover {
     color: black!important;
+}
+
+/* NEWSLETTER */
+.news-section-wrapper {
+    background-color: rgb(255, 239, 241);
+    padding: 100px 20px;
+    margin-top: 20px;
+}
+
+.news-img {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.news-img img {
+    width: 80px;
+    height: 80px;
+}
+
+.news-section {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 50px 40px;
+    text-align: center;
+    border: 2px solid rgb(234, 8, 8);
+    border-radius: 8px;
+    box-shadow: 5px 4px 12px #07070755;
+    position: relative;
+}
+
+.news-section h2 {
+    color: rgb(234, 8, 8);
+    font-size: 40px;
+}
+
+.news-section p {
+    padding: 10px 0;
+    color: rgb(69, 69, 69);
+    font-size: 18px;
+}
+
+.news-form {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.news-form input {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 190, 190);
+}
+
+.news-form button {
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid rgb(234, 8, 8);
+    color: rgb(234, 8, 8);
+    font-weight: bold;
+    background-color: rgb(255, 239, 241);
+}
+
+.news-form button:hover {
+    opacity: 0.7;
 }
 
 @media only screen and (max-width: 650px) {
@@ -156,6 +225,14 @@
     
     .banner-text h1 span {
         font-size: 50px;
+    }
+
+    .news-form {
+        flex-wrap: wrap;
+    }
+
+    .news-section {
+        padding: 50px 20px;
     }
 }
 

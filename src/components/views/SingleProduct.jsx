@@ -40,6 +40,11 @@ const SingleProduct = () => {
         notify();
     };
 
+    const goBack = () => {
+        navigate('/products');
+        window.scrollTo(0,0);
+    }
+
     return <div>
         {product && 
         (<div className="single-product-wrapper">
@@ -52,10 +57,10 @@ const SingleProduct = () => {
                 <p className="single-product-price"><b>${product.price}</b></p>
                 <p className="single-product-description">{product.description}</p>
                 <button className="button" onClick={addToCart}>Add to cart</button>
-                <button className="button back-btn" onClick={() => navigate('/products')}>&#171; Back to all products</button>
+                <button className="button back-btn" onClick={goBack}>&#171; Back to all products</button>
             </div>
         </div>)}
-        <ToastContainer position="top-center" transition={Slide} draggable />
+        <ToastContainer position="top-center" transition={Slide} autoClose={2000} draggable draggablePercent={60} />
     </div>;
 };
 
